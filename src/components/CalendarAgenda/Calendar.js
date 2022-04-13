@@ -162,7 +162,7 @@ function Calendar({
 
   function checkCalPreview(type, d) {
     if (type === "holidays") {
-      const todaysHolidays = monthAgenda.agenda.holidays.filter(
+      const todaysHolidays = monthAgenda.agenda?.holidays.filter(
         (x) => x.day == d.day
       );
       if (todaysHolidays?.length > 0 && d.month.includes("this-month")) {
@@ -203,7 +203,7 @@ function Calendar({
           </div>
         ))}
       </div>
-      <div className="calendar-days" onMouseDown={pickDate}>
+      <div className="calendar-days" onMouseUp={pickDate}>
         {weeks.map((w, i) => (
           <div key={i} className="calendar-week">
             {w.map((d, i) => (

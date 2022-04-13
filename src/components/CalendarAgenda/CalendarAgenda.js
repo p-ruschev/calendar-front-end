@@ -331,22 +331,52 @@ function CalendarAgenda() {
         />
         <Route path="/*" element={<Navigate to="/calendar" />} />
       </Routes>
-
-      {Boolean(Object.keys(monthAgenda).length) && (
-        <Calendar
-          monthAgenda={monthAgenda}
-          pickedDay={pickedDay}
-          year={year}
-          month={month}
-          today={today}
-          changePickedDay={changePickedDay}
-          changeMonth={changeMonth}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Calendar
+            monthAgenda={monthAgenda}
+            pickedDay={pickedDay}
+            year={year}
+            month={month}
+            today={today}
+            changePickedDay={changePickedDay}
+            changeMonth={changeMonth}
+            />
+          }
         />
-      )}
+        <Route
+          path={`/create-note`}
+          element={
+            <Calendar
+            monthAgenda={monthAgenda}
+            pickedDay={pickedDay}
+            year={year}
+            month={month}
+            today={today}
+            changePickedDay={changePickedDay}
+            changeMonth={changeMonth}
+            />
+          }
+        />
+        <Route
+          path="/edit-calendar-note/:noteId"
+          element={
+            <Calendar
+            monthAgenda={monthAgenda}
+            pickedDay={pickedDay}
+            year={year}
+            month={month}
+            today={today}
+            changePickedDay={changePickedDay}
+            changeMonth={changeMonth}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }
 
 export default CalendarAgenda;
-function solve(asd, asdf) {
-}
