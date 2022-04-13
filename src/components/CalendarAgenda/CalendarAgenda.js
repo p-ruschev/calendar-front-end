@@ -331,50 +331,15 @@ function CalendarAgenda() {
         />
         <Route path="/*" element={<Navigate to="/calendar" />} />
       </Routes>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Calendar
-            monthAgenda={monthAgenda}
-            pickedDay={pickedDay}
-            year={year}
-            month={month}
-            today={today}
-            changePickedDay={changePickedDay}
-            changeMonth={changeMonth}
-            />
-          }
-        />
-        <Route
-          path={`/create-note`}
-          element={
-            <Calendar
-            monthAgenda={monthAgenda}
-            pickedDay={pickedDay}
-            year={year}
-            month={month}
-            today={today}
-            changePickedDay={changePickedDay}
-            changeMonth={changeMonth}
-            />
-          }
-        />
-        <Route
-          path="/edit-calendar-note/:noteId"
-          element={
-            <Calendar
-            monthAgenda={monthAgenda}
-            pickedDay={pickedDay}
-            year={year}
-            month={month}
-            today={today}
-            changePickedDay={changePickedDay}
-            changeMonth={changeMonth}
-            />
-          }
-        />
-      </Routes>
+      <Calendar
+        monthAgenda={monthAgenda}
+        pickedDay={pickedDay}
+        year={year}
+        month={month}
+        today={today}
+        changePickedDay={changePickedDay}
+        changeMonth={changeMonth}
+      />
     </div>
   );
 }
