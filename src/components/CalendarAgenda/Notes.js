@@ -8,6 +8,10 @@ import "./Notes.css";
 
 function Notes({ editNoteFromAgendaState, delNoteFromAgendaState, dayAgenda, changeCalendarClass }) {
 
+  useEffect(() => {
+    changeCalendarClass('calendar');
+  }, []);
+
   const { user } = useAuth();
 
   return (
@@ -39,7 +43,7 @@ function Notes({ editNoteFromAgendaState, delNoteFromAgendaState, dayAgenda, cha
         </>
       )}
       {user.token ? (
-        <Link onClick={() => changeCalendarClass('calendar')} className="add-note" to={`/calendar/create-note`}>
+        <Link onClick={() => changeCalendarClass('calendar calendar-mobile')} className="add-note" to={`/calendar/create-note`}>
           +
         </Link>
       ) : null}
