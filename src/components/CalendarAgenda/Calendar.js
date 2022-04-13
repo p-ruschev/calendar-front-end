@@ -203,7 +203,7 @@ function Calendar({
           </div>
         ))}
       </div>
-      <div className="calendar-days" onMouseUp={pickDate}>
+      <div className="calendar-days" onTouchStart={pickDate} onMouseUp={pickDate}>
         {weeks.map((w, i) => (
           <div key={i} className="calendar-week">
             {w.map((d, i) => (
