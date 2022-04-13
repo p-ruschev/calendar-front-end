@@ -1,0 +1,9 @@
+.holiday {
+}
+.holiday-title {
+  background: lightgrey;
+  cursor: pointer;
+}
+.holiday-description {
+  background: peachpuff;
+}

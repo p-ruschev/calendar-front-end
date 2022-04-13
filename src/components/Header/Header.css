@@ -1,0 +1,180 @@
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  z-index: 5;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-menu {
+  display: flex;
+  height: 2em;
+  justify-content: right;
+  align-items: center;
+}
+.logged-buttons {
+  display: flex;
+  margin-right: 1em;
+}
+.header a {
+  padding: 0.3em 1em;
+  text-decoration: none;
+  border-radius: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: black;
+}
+.logout {
+  text-align: center;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  border-radius: 1em;
+  color: black;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.logout:hover {
+  background-color: rgba(235, 235, 235);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.profile {
+  margin-right: 0.5em;
+  padding: 0.3em 1em;
+  border-radius: 1em;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.profile:hover {
+  background-color: rgba(235, 235, 235);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.header a:hover {
+  background-color: rgba(235, 235, 235);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.active-link {
+  background-color: rgba(235, 235, 235);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.guest-menu {
+  display: flex;
+}
+
+.load-bar-complete {
+  position: relative;
+  background: green;
+  height: 2px;
+  width: 100%;
+}
+.load-bar-start {
+  position: relative;
+  height: 2px;
+  animation: loading 2s ease-in-out infinite;
+}
+.info {
+  margin-top: 2rem;
+}
+.contacts h4 {
+  font-weight: normal;
+}
+@keyframes loading {
+  0% {
+    background: grey;
+    width: 0%;
+  }
+  100% {
+    background: green;
+    width: 100%;
+  }
+}
+.load-bar-error {
+  position: relative;
+  background: rgba(174, 95, 110, 1);
+  height: 2px;
+  width: 100%;
+}
+.load-bar-neutral {
+  position: relative;
+  background: rgba(190, 190, 190, 1);
+  height: 2px;
+  width: 100%;
+}
+.header-error-msg {
+  color: rgba(174, 95, 110, 1);
+}
+
+@media screen and (max-width: 900px) {
+  .profile {
+    display: none;
+  }
+  .logout {
+    position: relative;
+    font-size: 0.8rem;
+    margin: 0rem;
+    padding: 0.3rem 0.1rem;
+    background: lightgrey;
+  }
+  .logged-buttons {
+    margin-right: 0.4rem;
+  }
+  .header a {
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    background: lightgrey;
+  }
+  .sub-menu {
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+  .guest-menu {
+    background: rgba(245, 245, 245, 1);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    flex-flow: column;
+    scale: 0.9;
+  }
+  .guest-menu a {
+    padding: 0 2px;
+    margin-bottom: 1px;
+    text-align: center;
+  }
+  .left-nav {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0.2em;
+    height: 100%;
+    align-items: center;
+  }
+  .active-link {
+    background-color: rgba(235, 235, 235);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+  }
+  .header-error-msg {
+    position: absolute;
+    color: rgba(174, 95, 110, 1);
+    background: rgba(245, 245, 245, 1);
+    scale: 0.7;
+    z-index: 1;
+    padding: 0 10px;
+  }
+  .mobile-search {
+    display: none;
+  }
+}

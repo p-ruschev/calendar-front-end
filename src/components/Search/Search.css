@@ -1,0 +1,132 @@
+.search {
+  display: flex;
+  margin-right: 1em;
+  height: 100%;
+}
+.zoom-icon:hover {
+  background-color: rgba(235, 235, 235);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 1em;
+}
+.search-bar {
+  position: relative;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  background: none;
+  padding: 0 0.5em;
+  font-size: 1.1em;
+  width: 7em;
+}
+.search-day {
+  position: relative;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  background: none;
+  font-size: 1.1em;
+  width: 2em;
+  text-align: center;
+}
+.search-month {
+  position: relative;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  background: none;
+  font-size: 1.1em;
+  width: 2em;
+  text-align: center;
+}
+.search-year {
+  position: relative;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  background: none;
+  font-size: 1.1em;
+  width: 2.5em;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .search {
+    margin-right: 0.2rem;
+    scale: 0.7;
+  }
+
+  .zoom-icon {
+  }
+
+  .search-bar {
+    background: rgba(245, 245, 245, 1);
+    padding: 0rem;
+    top: 2px;
+    height: 100%;
+  }
+  .search-day {
+    background: rgba(245, 245, 245, 1);
+    font-size: 1.1rem;
+    height: 100%;
+    text-align: center;
+  }
+  .search-month {
+    background: rgba(245, 245, 245, 1);
+    font-size: 1.1rem;
+    height: 100%;
+    text-align: center;
+  }
+  .search-year {
+    height: 100%;
+    background: rgba(245, 245, 245, 1);
+    font-size: 1.1rem;
+    text-align: center;
+  } 
+/*  .zoom-icon {
+    position: absolute;
+    right: 0;
+  }
+
+  .search-bar {
+    position: absolute;
+    background: rgba(245, 245, 245, 1);
+    padding: 0rem;
+    top: 2px;
+    width: 100px;
+    height: 100%;
+    right: 150px;
+  }
+  .search-day {
+    position: absolute;
+    background: rgba(245, 245, 245, 1);
+    font-size: 1.1em;
+    right: 30px;
+    height: 100%;
+    width: 30px;
+    text-align: center;
+  }
+  .search-month {
+    position: absolute;
+    background: rgba(245, 245, 245, 1);
+    font-size: 1.1em;
+    right: 60px;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+  }
+  .search-year {
+    right: 7rem;
+    height: 100%;
+    position: absolute;
+    background: rgba(245, 245, 245, 1);
+    font-size: 1.1em;
+    right: 90px;
+    width: 60px;
+    text-align: center;
+  } */
+  .zoom-icon:hover {
+    background-color: rgba(245, 245, 245, 1);
+    box-shadow: none;
+  }
+}
