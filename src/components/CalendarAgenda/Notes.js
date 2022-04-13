@@ -37,6 +37,7 @@ function Notes({ editNoteFromAgendaState, delNoteFromAgendaState, dayAgenda, cha
               key={note._id}
               editNoteFromAgendaState={editNoteFromAgendaState}
               delNoteFromAgendaState={delNoteFromAgendaState}
+              changeCalendarClass={changeCalendarClass}
               note={note}
             />
           ))}

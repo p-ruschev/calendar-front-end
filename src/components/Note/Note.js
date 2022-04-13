@@ -12,6 +12,7 @@ import "./Note.css";
 function Note({
   editNoteFromAgendaState,
   delNoteFromAgendaState,
+  changeCalendarClass,
   note,
   noteType,
   userRole,
@@ -79,6 +80,7 @@ function Note({
         {noteType === "customNote" ? (
           <div className="title-buttons">
             <Link
+              onClick={() => changeCalendarClass('calendar calendar-mobile')}
               className="title-edit"
               to={`/calendar/edit-custom-note/${note._id}`}
             >
