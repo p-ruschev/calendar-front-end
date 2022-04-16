@@ -275,7 +275,7 @@ function NoteBlank({
           <br />
           <input
             onChange={onChangeTitle}
-            onFocus={() => changeCalendarClass('calendar-mobile')}
+            onClick={() => changeCalendarClass('calendar-mobile')}
             type="text"
             className="note-blank-text"
             id="note-blank-title"
@@ -288,7 +288,7 @@ function NoteBlank({
           <label htmlFor="note-blank-description">{descriptionLabel}</label>
           <textarea
             onChange={onChangeDescription}
-            onFocus={() => changeCalendarClass('calendar-mobile')}
+            onClick={() => changeCalendarClass('calendar-mobile')}
             className="note-blank-textarea"
             id="note-blank-description"
             placeholder=""
@@ -303,7 +303,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeYear}
-              onFocus={() => changeCalendarClass('calendar-picker')}
+              onClick={() => changeCalendarClass('calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-year"
@@ -317,7 +317,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeMonth}
-              onFocus={() => changeCalendarClass('calendar-picker')}
+              onClick={() => changeCalendarClass('calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-month"
@@ -331,7 +331,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeDay}
-              onFocus={() => changeCalendarClass('calendar-picker')}
+              onClick={() => changeCalendarClass('calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-day"
