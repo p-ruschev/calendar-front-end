@@ -214,11 +214,10 @@
     display: none;
   }
 
-  /*
   .calendar-picker .calendar-day-names {
     position: absolute;
     width: 250px;
-    top: 50vh;
+    bottom: calc(50vh - 50px);
     left: calc((100vw - 250px)/2);
     background-color: white;
     padding: 5px;
@@ -229,13 +228,14 @@
     border-top-right-radius: 10px;
     width: 250px;
     left: calc((100vw - 250px)/2);
-    top: 50vh;
+    bottom: calc(50vh - 40px);
     position: absolute;
     padding: 5px;
   }
   .calendar-picker .calendar-days {
     width: 250px;
-    top: 50vh;
+    height: 150px;
+    bottom: 50vh;
     left: calc((100vw - 250px)/2);
     position: absolute;
     border-bottom-left-radius: 10px;
@@ -243,13 +243,6 @@
     padding: 5px;
     background-color: white;
   }
-  */
-
-
-
-
-
-
 
   .calendar-picker .calendar-previews {
     display: none;
