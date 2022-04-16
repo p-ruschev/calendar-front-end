@@ -150,19 +150,6 @@
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-/*
-.note-blank-text:focus {
-  background: darkgrey;
-}
-.incorrect label{
-  color: rgba(163, 18, 18, 1);
-  border-bottom: 1px solid rgba(163, 18, 18, 1);
-}
-
-.correct label{
-  color: rgba(98, 155, 78, 1);
-}
- */
 
 .incorrect label {
   color: rgba(164, 95, 110, 1);

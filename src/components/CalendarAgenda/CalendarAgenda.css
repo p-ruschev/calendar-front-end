@@ -195,6 +195,15 @@
       "calendar-day-names"
       "calendar-days"
   }
+  .calendar-mobile .calendar-day-names {
+    display: none;
+  }
+  .calendar-mobile .calendar-head {
+    display: none;
+  }
+  .calendar-mobile .calendar-days {
+    display: none;
+  }
   .calendar-picker {
     display: grid;
     overflow: hidden;
@@ -205,15 +214,6 @@
       "calendar-head"
       "calendar-day-names"
       "calendar-days"
-  }
-  .calendar-mobile .calendar-day-names {
-    display: none;
-  }
-  .calendar-mobile .calendar-head {
-    display: none;
-  }
-  .calendar-mobile .calendar-days {
-    display: none;
   }
 
   .calendar-picker .calendar-day-names {
