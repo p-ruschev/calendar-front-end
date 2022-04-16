@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Calendar from "./Calendar.js";
 import * as calendarService from "../../services/calendarService.js";
 import { useHeader } from "../../contexts/HeaderContext.js";
 import { useError } from "../../contexts/ErrorContext.js";
@@ -17,7 +18,7 @@ function NoteBlank({
   noteType,
   changeCalendarClass,
 }) {
-  
+
   const [note, setNote] = useState({
     title: "",
     description: "",
@@ -274,6 +275,7 @@ function NoteBlank({
           <br />
           <input
             onChange={onChangeTitle}
+            onFocus={() => changeCalendarClass('calendar calendar-mobile')}
             type="text"
             className="note-blank-text"
             id="note-blank-title"
@@ -286,6 +288,7 @@ function NoteBlank({
           <label htmlFor="note-blank-description">{descriptionLabel}</label>
           <textarea
             onChange={onChangeDescription}
+            onFocus={() => changeCalendarClass('calendar calendar-mobile')}
             className="note-blank-textarea"
             id="note-blank-description"
             placeholder=""
@@ -300,6 +303,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeYear}
+              onFocus={() => changeCalendarClass('calendar calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-year"
@@ -313,6 +317,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeMonth}
+              onFocus={() => changeCalendarClass('calendar calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-month"
@@ -326,6 +331,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeDay}
+              onFocus={() => changeCalendarClass('calendar calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-day"
@@ -341,6 +347,7 @@ function NoteBlank({
                 <br />
                 <input
                   onChange={onChangeHour}
+                  onFocus={() => changeCalendarClass('calendar calendar-mobile')}
                   type="text"
                   className="note-blank-number"
                   id="note-blank-hour"
@@ -354,6 +361,7 @@ function NoteBlank({
                 <br />
                 <input
                   onChange={onChangeMinutes}
+                  onFocus={() => changeCalendarClass('calendar calendar-mobile')}
                   type="text"
                   className="note-blank-number"
                   id="note-blank-minutes"
@@ -361,7 +369,7 @@ function NoteBlank({
                   name="minutes"
                   value={note.minutes}
                 />
-              </div>
+            </div>
             </>
           ) : null}
         </div>

@@ -39,7 +39,9 @@ function CalendarAgenda() {
   const { noteId } = useParams();
 
   useEffect(() => {
-    pullAgenda();
+    if(calendarClass === 'calendar') {
+      pullAgenda();
+    }
   }, [month]);
 
   useEffect(() => {
@@ -160,8 +162,7 @@ function CalendarAgenda() {
       if (resultNote.year === year && resultNote.month === month + 1) {
         notes = monthAgenda.agenda.notes.reduce((notes, note) => {
           if (note._id == noteId) {
-            notes.push(Object.assign({}, resultNote));
-          } else {
+            notes.push(Object.assign({}, resultNote)); } else {
             notes.push(Object.assign({}, note));
           }
           return notes;
@@ -339,6 +340,8 @@ function CalendarAgenda() {
         today={today}
         changePickedDay={changePickedDay}
         changeMonth={changeMonth}
+        calendarClass={calendarClass}
+        changeCalendarClass={changeCalendarClass}
       />
     </div>
   );

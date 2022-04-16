@@ -13,13 +13,15 @@ function Calendar({
   today,
   changePickedDay,
   changeMonth,
+  calendarClass,
+  changeCalendarClass,
 }) {
   const [weeks, setWeeks] = useState([]);
   const { loadResult, searchResult } = useHeader();
 
   useEffect(() => {
     populateWeeks();
-  }, [monthAgenda]);
+  }, [monthAgenda, month]);
 
   useEffect(() => {
     if (searchResult.notes) {
@@ -94,6 +96,9 @@ function Calendar({
 
       setWeeks(clearedWeeks);
       changePickedDay(Number(e.target.getAttribute("day")));
+      if(calendarClass.includes('calendar-picker')) {
+        changeCalendarClass('calendar calendar-mobile')
+      }
     }
   }
 
