@@ -275,7 +275,7 @@ function NoteBlank({
           <br />
           <input
             onChange={onChangeTitle}
-            onClick={() => changeCalendarClass('calendar-mobile')}
+            onTouchStart={() => changeCalendarClass('calendar-mobile')}
             type="text"
             className="note-blank-text"
             id="note-blank-title"
@@ -288,7 +288,7 @@ function NoteBlank({
           <label htmlFor="note-blank-description">{descriptionLabel}</label>
           <textarea
             onChange={onChangeDescription}
-            onClick={() => changeCalendarClass('calendar-mobile')}
+            onTouchStart={() => changeCalendarClass('calendar-mobile')}
             className="note-blank-textarea"
             id="note-blank-description"
             placeholder=""
@@ -303,7 +303,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeYear}
-              onClick={() => changeCalendarClass('calendar-picker')}
+              onTouchStart={() => changeCalendarClass('calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-year"
@@ -317,7 +317,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeMonth}
-              onClick={() => changeCalendarClass('calendar-picker')}
+              onTouchStart={() => changeCalendarClass('calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-month"
@@ -331,7 +331,7 @@ function NoteBlank({
             <br />
             <input
               onChange={onChangeDay}
-              onClick={() => changeCalendarClass('calendar-picker')}
+              onTouchStart={() => changeCalendarClass('calendar-picker')}
               type="text"
               className="note-blank-number"
               id="note-blank-day"
@@ -347,7 +347,7 @@ function NoteBlank({
                 <br />
                 <input
                   onChange={onChangeHour}
-                  onFocus={() => changeCalendarClass('calendar calendar-mobile')}
+                  onTouchStart={() => changeCalendarClass('calendar calendar-mobile')}
                   type="text"
                   className="note-blank-number"
                   id="note-blank-hour"
@@ -361,7 +361,7 @@ function NoteBlank({
                 <br />
                 <input
                   onChange={onChangeMinutes}
-                  onFocus={() => changeCalendarClass('calendar calendar-mobile')}
+                  onTouchStart={() => changeCalendarClass('calendar calendar-mobile')}
                   type="text"
                   className="note-blank-number"
                   id="note-blank-minutes"
