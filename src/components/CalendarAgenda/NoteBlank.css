@@ -179,7 +179,7 @@
     position: absolute;
     top: 0;
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-flow: column;
     justify-content: center;
