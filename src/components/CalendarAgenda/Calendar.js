@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Routes, Route, useSearchParams } from "react-router-dom";
 
 import "./CalendarAgenda.css";
 
@@ -69,7 +68,6 @@ function Calendar({
   }
 
   function pickDate(e) {
-    //const month = pickedDate.m;
     loadResult({});
     const day = e.target.getAttribute("day");
     if (e.target.classList.contains("this-month")) {
@@ -107,7 +105,6 @@ function Calendar({
     let week = [];
     const structuredDays = [];
     const firstDay = new Date(year, month, 1).getDay();
-    const currentDay = new Date().getDate();
     const lastDay = new Date(year, month + 1, 0).getDate();
     const otherMonthsDays = 42 - lastDay - firstDay + 1;
     const prevMonthLastDay = new Date(year, month, 0).getDate();

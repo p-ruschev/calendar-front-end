@@ -6,6 +6,6 @@ import "./Result.css";
 function Result() {
   const navigate = useNavigate();
 
-  return <div className="result">asdf</div>;
+  return <div className="result"></div>;
 }
 export default Result;

@@ -10,7 +10,6 @@ import { ReactComponent as EditIcon } from "./assets/edit.svg";
 import "./Note.css";
 
 function Note({
-  editNoteFromAgendaState,
   delNoteFromAgendaState,
   changeCalendarClass,
   note,
@@ -23,7 +22,7 @@ function Note({
 
   const { startLoading } = useHeader();
   const { loadError } = useError();
-  const navigate = useNavigate();
+  console.log(noteType)
 
   async function handleDel() {
     startLoading();
@@ -56,7 +55,7 @@ function Note({
         onClick={() => setOpenDescription(!openDescription)}
         className="title-container"
       >
-        {noteType === "customNote" &&
+        {noteType === "customNote" ? ( 
         note.hour !== "" &&
         note.minutes !== "" ? (
           <div className="title-time">
@@ -64,7 +63,7 @@ function Note({
               (note.minutes <= 9 && note.minutes.length < 2) ? "0" + note.minutes : note.minutes
             }`}
           </div>
-        ) : null}
+        ) : <div className="title-time">-- : --</div> ) : null}
         {noteType === "calendarNote" && note.search && (
           <div className="search-date-info">{`${note.month}/${note.day}`}</div>
         )}
@@ -72,7 +71,7 @@ function Note({
           <div className="search-date-info">{`${note.year}/${note.month}/${note.day}`}</div>
         )}
         <div
-          className="title-title"
+          className={`title-title ${noteType === "calendarNote" ? "calendar-note" : null}`}
           onClick={() => setOpenDescription(!openDescription)}
         >
           {note.title}

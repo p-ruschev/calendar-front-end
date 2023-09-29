@@ -1,25 +1,25 @@
 .add-note {
   position: absolute;
+  left: calc(50% - 0.5em);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  width: 1em;
-  height: 1em;
-  scale: 2.5;
   float: right;
-  border-radius: 1em;
-  margin-top: 2em;
-  left: calc(50% - 0.5em);
+  text-decoration: none;
+  width: 36px;
+  height: 36px;
+  font-size: 36px;
+  border-radius: 18px;
+  margin-top: 10px;
   color: black;
 }
+
 .add-calendar-note {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  /*  border: 1px solid black;*/
   width: 1.5rem;
   height: 1.5rem;
   scale: 2.5;
@@ -29,10 +29,12 @@
   left: calc(50% - 0.75rem);
   color: black;
 }
+
 .add-calendar-note:hover {
   background-color: rgba(235, 235, 235);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
+
 .add-note:hover {
   background-color: rgba(235, 235, 235);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -45,13 +47,9 @@
     margin: 0.1rem;
     font-weight: normal;
   }
+
   .add-note {
-    margin-top: 0.2rem;
-    scale: 1.2;
-    left: 50%;
+    background-color: rgba(235, 235, 235);
   }
-  .add-calendar-note {
-    margin-top: 1.5rem;
-    scale: 1.2;
-  }
+
 }

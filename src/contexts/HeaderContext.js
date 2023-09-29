@@ -1,8 +1,4 @@
 import { createContext, useContext, useState } from "react";
-//import { useNavigate } from "react-router-dom";
-
-//import * as authService from "../services/authService";
-//import useLocalStorage from "../hooks/useLocalStorage";
 
 export const HeaderContext = createContext();
 
@@ -19,8 +15,6 @@ export const HeaderProvider = ({ children }) => {
   };
   const completeLoading = () => {
     setLoad("load-bar-complete");
-    //   setTimeout(() => {
-    //   }, 800)
   };
 
   const errorLoading = () => {

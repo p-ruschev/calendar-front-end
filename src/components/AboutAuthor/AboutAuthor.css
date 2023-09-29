@@ -20,9 +20,11 @@
   flex-flow: column;
   margin-top: 2em;
 }
+
 .contacts h4 {
   margin: 0.2em;
 }
+
 .info {
   position: relative;
   width: calc(70% - 2em);
@@ -32,33 +34,39 @@
 @media screen and (max-width: 900px) {
   .about-page {
     flex-flow: column;
-    margin: 0.3rem;
-    width: 90%;
-    left: 0%;
+    align-items: center;
+    width: 80%;
   }
+
   .about-page h4 {
     line-height: 1rem;
     font-size: 0.9rem;
     margin: 0.2rem 0rem;
   }
+
   .about-page p {
     line-height: 1rem;
     font-size: 0.8rem;
     margin: 0;
   }
+
   .contacts {
-    margin: 0.5rem 0;
+    margin: 2rem 0;
   }
+
   .contacts h4 {
     font-weight: normal;
   }
+
   .about-page img {
     position: relative;
     width: 170px;
     height: auto;
   }
+
   .info {
     position: relative;
-    width: calc(95% - 2rem);
+    padding: 0;
+    width: 100%;
   }
 }

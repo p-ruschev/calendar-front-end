@@ -60,6 +60,7 @@
   border-radius: 1em;
   background-color: rgba(245, 245, 245);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .back-btn:hover {
@@ -173,14 +174,12 @@
     align-items: center;
   }
   .note-form-description label {
-    scale: 0.7;
     width: 70%;
   }
   .note-form-title {
     margin-bottom: 5px;
   }
   .note-form-title label {
-    scale: 0.7;
     width: 70%;
   }
   .note-form-buttons input {

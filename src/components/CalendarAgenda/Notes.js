@@ -44,9 +44,7 @@ function Notes({ editNoteFromAgendaState, delNoteFromAgendaState, dayAgenda, cha
         </>
       )}
       {user.token ? (
-        <Link onClick={() => changeCalendarClass('calendar calendar-mobile')} className="add-note" to={`/calendar/create-note`}>
-          +
-        </Link>
+        <Link onClick={() => changeCalendarClass('calendar calendar-mobile')} className="add-note" to={`/calendar/create-note`}>+</Link>
       ) : null}
       {user.role === "admin" ? (
         <Link className="add-calendar-note" to={`/calendar/create-holiday`}>

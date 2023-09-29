@@ -1,6 +1,6 @@
 import * as requests from "../utils/requests.js";
 
-const host = "https://calendar-notes-node.herokuapp.com";
+const host = "https://calendar-back-end.onrender.com";
 
 export const createHoliday = (data, user) => {
   return requests.post(host + "/calendar/create-holiday", data, user);

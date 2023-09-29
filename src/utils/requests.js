@@ -17,7 +17,6 @@ async function request(url, options) {
     }
   } catch (error) {
     throw error;
-    //    throw new Error(error.message);
   }
 }
 
@@ -35,7 +34,6 @@ function createOptions(method = "get", body, user) {
   }
   return options;
 }
-//decorator functions for all REST methods
 export async function get(url, user) {
   return await request(url, createOptions("get", null, user));
 }
@@ -52,7 +50,6 @@ export async function del(url, user) {
   return await request(url, createOptions("delete", null, user));
 }
 
-// authentication function (login/register/logout)
 
 export async function login(email, password) {
   const result = await post(settings.host + "/users/login", {
@@ -69,6 +66,7 @@ export async function register(email, password) {
   });
   return result;
 }
+
 export function logout() {
   const result = get(settings.host + "/users/logout");
   return result;

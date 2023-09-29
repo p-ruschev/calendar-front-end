@@ -27,20 +27,12 @@ function Header() {
     <div className="header">
       <div className="navbar">
         <div className={navStyleSearch}>
+          <Link to="/calendar">Календар</Link>
           {pathname.includes("calendar") || pathname.includes("about") ? (
             <Link to="/">Начало</Link>
           ) : (
-            <Link to="/calendar">Календар</Link>
+            <Link to="/about">Автор</Link>
           )}
-          {pathname.includes("about") ? (
-            <Link to="/calendar">Календар</Link>
-          ) : null}
-          <NavLink
-            className={(navData) => (navData.isActive ? "active-link" : "")}
-            to="/about"
-          >
-            Автор
-          </NavLink>
         </div>
         {error.origin === "back-end" && (
           <div className="header-error-msg">{error.msg}</div>
@@ -55,5 +47,5 @@ function Header() {
     </div>
   );
 }
-//<div className="loader-false"></div>
+
 export default Header;

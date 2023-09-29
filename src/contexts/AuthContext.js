@@ -59,7 +59,6 @@ export const AuthProvider = ({ children }) => {
           origin: "back-end",
           msg: "Възникна грешка при отписване",
         });
-        //setAuthError({origin: 'back-end', msg: "Възникна грешка при отписвне"})
       });
   };
 

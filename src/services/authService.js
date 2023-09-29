@@ -1,6 +1,6 @@
 import * as requests from "../utils/requests.js";
 
-const host = "https://calendar-notes-node.herokuapp.com";
+const host = "https://calendar-back-end.onrender.com";
 
 requests.settings.host = host;
 

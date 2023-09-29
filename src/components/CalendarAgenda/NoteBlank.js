@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-import Calendar from "./Calendar.js";
 import * as calendarService from "../../services/calendarService.js";
 import { useHeader } from "../../contexts/HeaderContext.js";
 import { useError } from "../../contexts/ErrorContext.js";
@@ -99,7 +97,7 @@ function NoteBlank({
       note.day !== "" &&
       correctDate &&
       note.title.length >= 4 &&
-      note.description.length >= 4
+      ((note.title.length <= 20 && !isAdmin) || isAdmin)
     ) {
       startLoading();
       const data = { ...note };
@@ -149,7 +147,7 @@ function NoteBlank({
       } else {
         loadError({
           origin: "back-end",
-          msg: "Невъведени заглавие или описание",
+          msg: "Невалидни заглавие или описание",
         });
       }
     }
@@ -178,6 +176,9 @@ function NoteBlank({
   const onChangeTitle = (e) => {
     if (e.target.value.length < 4) {
       setTitleLabel("кратко заглавие");
+      setTitleLabelClass("note-form-title incorrect");
+    } else if (e.target.value.length > 20 && !isAdmin) {
+      setTitleLabel("твърдо дълго заглавие");
       setTitleLabelClass("note-form-title incorrect");
     } else {
       setTitleLabel("заглавие");
@@ -369,7 +370,6 @@ function NoteBlank({
         <div className="note-form-buttons">
           <input
             className="back-btn"
-            type="submit"
             value={"Отказ"}
             onClick={() => {
               navigate("/calendar");

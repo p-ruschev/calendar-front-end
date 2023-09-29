@@ -117,12 +117,3 @@ div .cancel {
 .incorrect {
   color: rgba(184, 95, 110, 1);
 }
-
-@media screen and (max-width: 900px) {
-  .auth-form-container {
-    scale: 0.7;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-}

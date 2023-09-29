@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import {
-  useNavigate,
   Routes,
   Route,
-  useParams,
   Navigate,
 } from "react-router-dom";
 
@@ -36,7 +34,6 @@ function CalendarAgenda() {
   const { user } = useAuth();
   const { loadError } = useError();
   const { startLoading, completeLoading, searchResult, loadResult } = useHeader();
-  const { noteId } = useParams();
 
   useEffect(() => {
     if(calendarClass === 'calendar') {

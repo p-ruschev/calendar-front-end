@@ -4,8 +4,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import * as calendarService from "../../services/calendarService.js";
 import { useAuth } from "../../contexts/AuthContext.js";
 import { useHeader } from "../../contexts/HeaderContext.js";
-import { ReactComponent as ZoomIcon } from "../assets/profile.svg";
-import Result from "./Result.js";
+import { ReactComponent as ZoomIcon } from "../assets/zoom-icon.svg";
 import "./Search.css";
 
 const currentDate = new Date();
@@ -132,7 +131,6 @@ function Search({ loadResult }) {
             onChange={onChangeYear}
             value={year}
             placeholder="гггг?"
-            className="search-year"
           />
           <input
             className="search-month"
@@ -141,7 +139,6 @@ function Search({ loadResult }) {
             onChange={onChangeMonth}
             value={month}
             placeholder="мм?"
-            className="search-month"
           />
           <input
             className="search-day"
@@ -150,7 +147,6 @@ function Search({ loadResult }) {
             onChange={onChangeDay}
             value={day}
             placeholder="дд?"
-            className="search-day"
           />
         </>
       )}
